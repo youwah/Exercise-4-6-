@@ -5,7 +5,7 @@ exercise5(answer)
 2. error
 3. because its without main class
 
-(task2)
+(Task2)
 
 import java.util.Scanner;
 public class TriangleDemo
@@ -29,18 +29,26 @@ public class TriangleDemo
         ttt.set(height,base);
 
         // Display the height, base and area (use accessor)
-        System.out.println("The pyramid's height = "
+        System.out.println("The pyramid's height is "
                 + ttt.getHeight());
-        System.out.println("The pyramid's base = "
+        System.out.println("The pyramid's base is "
                 + ttt.getBase());
 
-        System.out.println("The pyramid's area = "
+        System.out.println("The pyramid's area is "
                 + ttt.getArea());
 
     }
 }
 
-(task3)
+2.)the output is:
+   Please enter your height: 170
+   Please enter your base: 456
+   The pyramid's height = 170.0
+   The pyramid's base = 456.0
+   The pyramid's area = 38760.0
+
+
+(Task3)
 //main class
 import java.util.Scanner;
 public class PayrollDemo {
