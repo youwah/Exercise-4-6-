@@ -1,0 +1,100 @@
+exercise5(answer)
+(Task1)
+
+1. the file name is Traingle.java
+2. error
+3. because its without main class
+
+(task2)
+
+import java.util.Scanner;
+public class TriangleDemo
+{
+    public static void main(String[] args)
+    {   double height;
+        double base;
+        //create a Scanner object
+        Scanner input = new Scanner(System.in);
+
+        // Create a Triangle object.
+        Triangle ttt = new Triangle();
+
+        // Prompt user to input value for height and base
+        System.out.print("Please enter your height: ");
+        height = input.nextDouble();
+        System.out.print("Please enter your base: ");
+        base = input.nextDouble();
+
+        //Set the height and base (use mutator)
+        ttt.set(height,base);
+
+        // Display the height, base and area (use accessor)
+        System.out.println("The pyramid's height = "
+                + ttt.getHeight());
+        System.out.println("The pyramid's base = "
+                + ttt.getBase());
+
+        System.out.println("The pyramid's area = "
+                + ttt.getArea());
+
+    }
+}
+
+(task3)
+//main class
+import java.util.Scanner;
+public class PayrollDemo {
+    public static void main(String[] args){
+        
+        Employee eply = new Employee();
+        eply.input();
+
+        Payroll pr = new Payroll(eply.grossPay,eply.stateTax,eply.federalTax);
+        pr.printOutput();
+    }
+}
+// payrollclass
+class Payroll{
+          private double netPay;
+          private double grossPay;
+          private double stateTax;
+          private double federalTax;
+          
+        public Payroll(double grossPay,double stateTax,double federalTax){
+
+        this.grossPay = grossPay;
+        this.stateTax = stateTax;
+        this.federalTax = federalTax;
+    }
+
+    public double calculateNetPay(){
+        return netPay = grossPay - stateTax - federalTax;
+    }
+
+    public void printOutput(){
+
+        System.out.printf("Net pay is: RM %.2f", calculateNetPay());
+    }
+}    
+//employee class
+class Employee{
+        double employeeId;
+        double grossPay;
+        double stateTax;
+        double federalTax;
+        
+        public void input(){
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.printf("%-30s%-2s", "Please enter your employee ID number", ": ");
+        employeeId = input.nextDouble();
+        System.out.printf("%-30s%-5s", "plese enter your Gross Pay", ": RM ");
+        grossPay = input.nextDouble();
+        System.out.printf("%-30s%-5s", "Pleaser enter your State Tax", ": RM ");
+        stateTax = input.nextDouble();
+        System.out.printf("%-30s%-5s", "Please enter your Federal Tax", ": RM");
+        federalTax = input.nextDouble();
+    }
+}
+
